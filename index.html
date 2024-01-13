@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIKC 1C</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        .carousel-control-prev, .carousel-control-next {
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 5px;
+            border: none;
+        }
+        
+        @media (min-width: 768px) {
+            .footer-section {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .carousel-control-prev-icon, .carousel-control-next-icon {
+            font-size: 30px;
+            color: #fff;
+        }
+
+        .carousel-control-prev {
+            left: 0;
+        }
+
+        .carousel-control-next {
+            right: 0;
+        }
+
+        .carousel-control-prev:hover, .carousel-control-next:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .dropdown-menu a:hover {
+            color: #fff !important; /* Ubah warna teks menjadi putih */
+            background-color: #007bff !important; /* Ubah warna latar belakang */
+            transition: all 0.2s ease ; /* Tambahkan efek transisi */
+        }
+
+        .navbar-nav .nav-link.active {
+            color: #000 !important; /* Warna teks aktif */
+        }
+
+        .navbar-nav .nav-link {
+            transition: all 0.3s ease; /* Efek transisi untuk semua perubahan */
+        }
+
+        .navbar-nav .nav-link:hover {
+            font-size: 1.1em; /* Perubahan ukuran huruf saat kursor diarahkan */
+        }
+
+        .navbar-nav .dropdown:hover .dropdown-menu {
+        display: block;
+        animation: fadeIn 0.2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        } 
+
+        .logo-sosmed a {
+            display: inline-block;
+            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .logo-sosmed a:hover {
+            transform: scale(1.1); /* Memperbesar saat hover */
+            color: #ff0080; /* Mengubah warna saat hover */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="m-3 d-flex align-items-start align-items-center">
+        <img src="https://media.licdn.com/dms/image/D4E1BAQGoxKp5Bmzc-w/company-background_10000/0/1655469613244/politeknik_negeri_indramayu_cover?e=2147483647&v=beta&t=L3BTHtK1npAg3GsYm1O59-2R26YyOiE1g89vQEnVy0k" alt="gambar" width="80px" class="logo">
+        <div class="m-2">
+            <span class="fs-4 fw-bold d-block">D4 Sistem Informasi Kota Cerdas 1C</span>
+            <span class="fs-4 fw-bold d-block">Politeknik Negeri Indramayu</span>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid bg-primary">
+            <a class="navbar-brand text-white fw-bold" href="#"><h4>D4SIKC1C</h4></a>
+            <button class="navbar-toggler border-light-subtle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="profil.html">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="mahasiswa.html">Mahasiswa</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dokumentasi
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="galeri-foto.html">Galeri Foto</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="galeri-video.html">Galeri Video</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="carouselExampleDark" class="carousel carousel-dark slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="kelas3.jpg" class="d-block w-100" alt="First slide">
+                <div class="carousel-caption d-xl-none text-white">
+                    <h4 class="d-block">Awal Semester</h4>
+                    <p class="d-block">Selasa, 5 September 2023</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="kelas2.jpg" class="d-block w-100" alt="Second slide">
+                <div class="carousel-caption d-xl-none text-white">
+                    <h4 class="d-block ">Akhir Semester</h4>
+                    <p class="d-block">Kamis, 21 Desember 2023</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <footer>
+        <section class="w-100 mt-2 bg-primary d-flex flex-column flex-md-row fs-6 footer-section">
+                <div class="m-2 d-flex" id="polindraLogo">
+                    <a href="https://polindra.ac.id" class="p-2">
+                        <img src="https://akupintar.id/documents/20143/0/Politeknik+Indramayu.png/fd0f3491-cdba-93ad-d8ec-8791c9b6d5d3?version=1.0&t=1519862765531&imageThumbnail=1" width="45px" alt="">
+                    </a>
+                    <span class="p-2"><img src="https://ugc.production.linktr.ee/Y5goyIhSTKojyNWYLTLV_NFogAld3DYQ1jh6Q?io=true&size=avatar-v1_0" width="45px" alt="logo himatif"></span>
+                </div>
+                <div class="fs-6 m-2 text-white">
+                    <p>KONTAK</p>
+                    <div class="logo-sosmed">
+                        <a href="https://wa.me/+6287711447242" target="_blank" class="d-flex align-items-center contact-link text-white p-1">
+                            <img src="https://www.tanjunglesung.com/wp-content/uploads/2018/12/logo-wa-whatsapp-300x300.png" width="25px" height="25px" alt="logo wa">
+                            <div class="ml-1">
+                                <span>+62 8771 1447 242</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="logo-sosmed mb-3">
+                        <a href="https://www.instagram.com/sikc1c_polindra?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA==" target="_blank" class="d-flex align-items-center contact-link text-white p-1">
+                            <img src="https://i1.wp.com/globalinfusion.org/wp-content/uploads/2018/01/ig-logo-email.png?ssl=1" width="25px" height="25px" alt="logo ig" class="a-sosmed sosmed">
+                            <span class="ml-1">@sikc1c_polindra</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="m-2 text-white fs-6">
+                    <p>ALAMAT</p>
+                    <div class="fs-6 text-white-50 "> <p>
+                        Jl.Lohbener Lama No.08,<br>
+                        Lohbener, Indramayu,<br>
+                        Jawa Barat | 45252</p>                        
+                    </div>
+                </div>
+                <div class="m-2">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.8880908169504!2d108.27887677499197!3d-6.408414693582334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6eb87d1fcaf97d%3A0x4fc15b3c8407ada4!2sPoliteknik%20Negeri%20Indramayu!5e0!3m2!1sid!2sid!4v1704200575233!5m2!1sid!2sid" width="150px" height="150px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+        </section>
+    </footer>
+    <script>
+        function changePage(pageName) {
+            // Menghapus kelas 'active' dari semua elemen navbar
+            document.querySelectorAll('.navbar-nav .nav-link').forEach(link => link.classList.remove('active'));
+
+            // Menambahkan kelas 'active' pada elemen yang sesuai dengan halaman yang dibuka
+            const currentPageLink = document.querySelector(`.navbar-nav .nav-link[href*='${pageName}']`);
+            if (currentPageLink) {
+                currentPageLink.classList.add('active');
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

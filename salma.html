@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salma Rusyda Shofalia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        .navbar-nav .dropdown:hover .dropdown-menu {
+        display: block;
+        animation: fadeIn 0.2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .carousel-control-prev, .carousel-control-next {
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 5px;
+            border: none;
+        }
+
+        @media (min-width: 768px) {
+            .footer-section {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar-brand {
+                align-items: center;
+            }
+        }
+
+        .carousel-control-prev-icon, .carousel-control-next-icon {
+            font-size: 30px;
+            color: #000;
+        }
+
+        .carousel-control-prev {
+            left: 0;
+        }
+
+        .carousel-control-next {
+            right: 0;
+        }
+
+        .carousel-control-prev:hover, .carousel-control-next:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .dropdown-menu a:hover {
+            color: #fff !important; /* Ubah warna teks menjadi putih */
+            background-color: #007bff !important; /* Ubah warna latar belakang */
+            transition: all 0.2s ease ; /* Tambahkan efek transisi */
+        }
+
+        .navbar-nav .nav-link.active {
+            color: #000 !important; /* Warna teks aktif */
+        }
+
+        .navbar-nav .nav-link {
+            transition: all 0.3s ease; /* Efek transisi untuk semua perubahan */
+        }
+
+        .navbar-nav .nav-link:hover {
+            font-size: 1.1em; /* Perubahan ukuran huruf saat kursor diarahkan */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .carousel-control-prev, .carousel-control-next {
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 5px;
+            border: none;
+        }
+
+        .tombol {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px;
+            padding: 0;
+        }
+
+        .sebelum a svg, .next a svg {
+            width: 20px;
+            height: 20px; 
+            font-weight: bold;
+        }
+
+        .back a svg{
+            width: 20px; 
+            height: 20px; 
+            font-weight: bold;
+        }
+
+        .profil {
+            font-size: 16px;
+            flex-wrap: wrap; 
+        }
+
+        .profil img {
+            margin-top: 10px;
+            margin-right: 10px;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        @media (min-width: 768px) {
+            .profil img {
+                margin: 10px;
+                width: 150px; /* Menyesuaikan ukuran gambar untuk desktop */
+                height: 150px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .profil {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .profil img {
+                margin: 10px 0;
+            }
+        }
+
+        .profil img:hover {
+            transform: scale(1.2);
+        }
+
+        #modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.9);
+        }
+
+        .modal-content {
+            position: relative;
+            margin: auto;
+            max-width: 700px;
+
+        }
+
+        .modal-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 100px;
+        }
+
+        .close {
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="m-3 d-flex align-items-start align-items-center">
+        <img src="https://media.licdn.com/dms/image/D4E1BAQGoxKp5Bmzc-w/company-background_10000/0/1655469613244/politeknik_negeri_indramayu_cover?e=2147483647&v=beta&t=L3BTHtK1npAg3GsYm1O59-2R26YyOiE1g89vQEnVy0k" alt="gambar" width="80px" class="logo">
+        <div class="m-2">
+            <span class="fs-4 fw-bold d-block">D4 Sistem Informasi Kota Cerdas 1C</span>
+            <span class="fs-4 fw-bold d-block">Politeknik Negeri Indramayu</span>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid bg-primary">
+            <a class="navbar-brand text-white fw-bold" href="#"><h4>D4SIKC1C</h4></a>
+            <button class="navbar-toggler border-light-subtle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="profil.html">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page" href="mahasiswa.html">Mahasiswa</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dokumentasi
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="dokumentasi-foto.html">Galeri Foto</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="dokumentasi-video.html">Galeri Video</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <hr class="mt-2">
+    
+    <div class="container">
+        <div class="tombol">
+            <div class="back">
+                <a href="mahasiswa.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+                </svg></a>
+            </div>
+            <div class="keterangan">
+                <h6 class="fw-bold text-center m-1">MAHASISWA</h6>
+            </div>
+            <div></div>
+        </div>
+    </div>
+    <hr>
+
+    <div class="container mt-2 ">
+        <div class="profil">
+            <h2 class="fw-bold">BIODATA MAHASISWA </h2>
+            <img class="profile-image" src="salma.jpg" alt="Foto Profil" data-bs-toggle="modal" data-bs-target="#myModal" data-image="salma.jpg">
+            <img class="profile-image" src="salma2.jpg" alt="Foto Profil" data-bs-toggle="modal" data-bs-target="#myModal" data-image="salma2.jpg">
+        </div>
+    </div>
+    
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <button type="button" class="btn-close close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <img id="full-image" src="" class="modal-img" alt="Foto Penuh">
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-2">
+        <table class="table table-bordered border-primary">
+            <thead >
+                <tr>
+                    <th class="table-primary">Nama Mahasiswa</th>
+                    <td>Salma Rusyda Shofalia</td>
+                </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th class="table-primary">NIM</th>
+                <td>2307078</td>
+            </tr>
+            <tr>
+                <th class="table-primary">Tempat/Tgl Lahir</th>
+                <td>Indramayu, 13 Mei 2004</td>
+            </tr>
+            <tr>
+                <th class="table-primary">Agama</th>
+                <td>Islam</td>
+            </tr>
+            <tr>
+                <th class="table-primary">Asal Sekolah</th>
+                <td>SMA PBS Miftahul Ulum </td>
+            </tr>
+            <tr>
+                <th class="table-primary">Asal Kota</th>
+                <td>Indramayu</td>
+            </tr>
+            <tr>
+                <th class="table-primary text-center align-middle">IPK</th>
+                <td><ul>
+                    <li>Semester 1</li>
+                    <li>Semester 2</li>
+                    <li>Semester 3</li>
+                    <li>Semester 4</li>
+                    <li>Semester 5</li>
+                    <li>Semester 6</li>
+                    <li>Semester 7</li>
+                    <li>Semester 8</li>
+                </ul></td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+
+    <hr>
+
+    <div class="container">
+        <div class="tombol">
+            <div class="sebelum">
+                <a href="revi.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+                </svg></a>
+            </div>
+            <div class="keterangan">
+                <h6 class="fw-bold text-center mt-2">Salma Rusyda Shofalia</h6>
+            </div>
+            <div class="next">
+                <a href="syahirah.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                </svg></a>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <script>
+        function changePage(pageName) {
+            // Menghapus kelas 'active' dari semua elemen navbar
+            document.querySelectorAll('.navbar-nav, .nav-link').forEach(link => link.classList.remove('active'));
+
+            // Menambahkan kelas 'active' pada elemen yang sesuai dengan halaman yang dibuka
+            const currentPageLink = document.querySelector(`.navbar-nav .nav-link[href*='${pageName}']`);
+            if (currentPageLink) {
+                currentPageLink.classList.add('active');
+            }
+        }
+
+        const profileImages = document.querySelectorAll('.profile-image');
+    const fullImage = document.getElementById('full-image');
+
+    profileImages.forEach(image => {
+        image.addEventListener('click', function () {
+            const imagePath = this.getAttribute('data-image');
+            fullImage.src = imagePath;
+        });
+    });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
